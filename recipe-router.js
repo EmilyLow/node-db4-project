@@ -27,4 +27,14 @@ router.get('/recipes/:id/ingredients', (req, res, next) => {
         })
 })
 
+router.get('/recipes/:id/steps', (req, res, next) => {
+    Recipes.getInstructions(req.params.id)
+        .then((steps) => {
+            res.json(steps);
+        } )
+        .catch((err) => {
+            next(err);
+        })
+})
+
 module.exports = router;
