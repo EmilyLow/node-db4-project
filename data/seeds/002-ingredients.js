@@ -6,6 +6,7 @@ exports.seed = async function(knex) {
         {name: 'cup water'},
         {name: 'tea bag'},
         {name: 'tbsp cocoa powder'},
+        {name: "slice of bread"}
        
       ]);
     
